@@ -2,47 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>lanxevo3</title>
+  <title>lanxevo3 â€” MCP and Integration Developer</title>
   <style>
     body { font-family: system-ui; background: #0d1117; color: #e6edf3; padding: 60px 20px; }
-    .container { max-width: 600px; margin: 0 auto; text-align: center; }
-    h1 { color: #58a6ff; margin-bottom: 8px; }
-    p { color: #8b949e; margin-bottom: 32px; line-height: 1.6; }
+    .container { max-width: 680px; margin: 0 auto; text-align: center; }
+    h1 { color: #58a6ff; margin-bottom: 8px; font-size: 2rem; }
+    p { color: #8b949e; margin-bottom: 28px; line-height: 1.6; font-size: 0.95rem; }
     .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; margin-bottom: 20px; text-align: left; }
-    .card h2 { color: #58a6ff; font-size: 1rem; margin-bottom: 12px; }
-    .item { background: #0d1117; border-radius: 8px; padding: 12px; margin-bottom: 8px; }
-    .item-title { font-weight: 600; margin-bottom: 4px; }
-    .item-desc { font-size: 0.85rem; color: #8b949e; }
+    .card h2 { color: #58a6ff; font-size: 0.85rem; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .item { background: #0d1117; border-radius: 8px; padding: 14px; margin-bottom: 10px; }
+    .item:last-child { margin-bottom: 0; }
+    .item-title { font-weight: 600; margin-bottom: 4px; font-size: 0.95rem; }
+    .item-desc { font-size: 0.82rem; color: #8b949e; line-height: 1.5; }
+    .item-meta { font-size: 0.72rem; color: #6e7681; margin-top: 6px; }
+    .tag { display: inline-block; border-radius: 4px; padding: 2px 7px; font-size: 0.7rem; margin-right: 4px; }
+    .t-merged { background: #052e16; color: #3fb950; }
+    .t-open { background: #2d1f00; color: #f0883e; }
+    .t-pr { background: #1e1030; color: #a371f7; }
+    .t-bounty { background: #1a1a2e; color: #f0883e; }
     .pay-box { background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 14px; margin-bottom: 10px; text-align: left; }
-    .pay-label { font-size: 0.75rem; color: #8b949e; text-transform: uppercase; margin-bottom: 6px; }
+    .pay-label { font-size: 0.7rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
     .pay-addr { font-family: monospace; font-size: 0.78rem; color: #58a6ff; word-break: break-all; background: #161b22; padding: 8px; border-radius: 4px; }
-    .btn { display: inline-block; color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; margin: 6px 4px 0 0; }
+    .pay-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .btn { display: inline-block; color: white; text-decoration: none; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 0.82rem; }
     .btn-stripe { background: #635bff; }
     .btn-algo { background: #238636; }
-    .btc { font-size: 0.75rem; color: #6e7681; margin-top: 8px; }
+    .footer { margin-top: 36px; font-size: 0.75rem; color: #484f58; }
+    .footer a { color: #6e7681; text-decoration: none; }
+    .footer a:hover { color: #58a6ff; }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>lanxevo3</h1>
-    <p>Open source developer. I build connectors, integrations, and tooling.<br>Paid in BTC or fiat. Fast delivery.</p>
+    <p>I build MCP server connectors, REST API integrations, and OSS tooling.<br>Fast delivery, multiple payment options, open to bounty or fixed-price work.</p>
+
     <div class="card">
-      <h2>Recent Work</h2>
+      <h2>Completed</h2>
       <div class="item">
-        <div class="item-title">Jira Service Management Connector</div>
-        <div class="item-desc">Full JSM REST API connector. Bounty paid via Algora.</div>
+        <div class="item-title">S3-compatible Blob Storage Connector <span class="tag t-merged">Merged</span></div>
+        <div class="item-desc">MinIO, R2, and Wasabi connector with path-style addressing for all S3-compatible storage.</div>
+        <div class="item-meta">Python &middot; boto3 &middot; blobstor</div>
       </div>
       <div class="item">
-        <div class="item-title">S3-compatible endpoint (MinIO, R2, Wasabi)</div>
-        <div class="item-desc">Blob connector with path-style addressing for all S3-compatible storage.</div>
-      </div>
-      <div class="item">
-        <div class="item-title">MCP OAuth per-user token fix</div>
-        <div class="item-desc">Fixed Redis key mismatch in MCP OAuth flow. Merged.</div>
+        <div class="item-title">MCP OAuth Per-User Token Fix <span class="tag t-merged">Merged</span></div>
+        <div class="item-desc">Fixed Redis key mismatch in MCP OAuth flow. Merged into Onyx.</div>
+        <div class="item-meta">Python / Redis / OAuth</div>
       </div>
     </div>
 
-    <div class="card payment-section">
+    <div class="card">
+      <h2>Open PRs</h2>
+      <div class="item">
+        <div class="item-title">Jira Service Management Connector <span class="tag t-open">Open</span> <span class="tag t-pr">PR</span> <span class="tag t-open">$250 bounty</span></div>
+        <div class="item-desc">Full JSM REST API connector with OAuth2. Bounty via Algora.</div>
+        <div class="item-meta"><a href="https://github.com/onyx-dot-app/onyx/pull/9490" target="_blank">PR #9490</a></div>
+      </div>
+      <div class="item">
+        <div class="item-title">WhatsApp MCP Server Fix <span class="tag t-open">Open</span> <span class="tag t-pr">PR</span></div>
+        <div class="item-desc">Fixed 10+ stalled PRs: bumped whatsmeow + added context.Background() to 5 calls to restore connectivity.</div>
+        <div class="item-meta"><a href="https://github.com/lharries/whatsapp-mcp/pull/193" target="_blank">PR #193</a></div>
+      </div>
+      <div class="item">
+        <div class="item-title">GitHub MCP Server authorAssociation Fix <span class="tag t-open">Open</span> <span class="tag t-pr">PR</span></div>
+        <div class="item-desc">Added missing authorAssociation field to IssueFragment GraphQL struct.</div>
+        <div class="item-meta"><a href="https://github.com/github/github-mcp-server/pull/2265" target="_blank">PR #2265</a></div>
+      </div>
+      <div class="item">
+        <div class="item-title">MCP SDK OAuth Content-Type Fix <span class="tag t-open">Open</span> <span class="tag t-pr">PR</span></div>
+        <div class="item-desc">Enforced form-urlencoded Content-Type for OAuth token endpoint per OAuth 2.1 spec.</div>
+        <div class="item-meta"><a href="https://github.com/modelcontextprotocol/typescript-sdk/pull/1774" target="_blank">PR #1774</a></div>
+      </div>
+    </div>
+
+    <div class="card">
       <h2>Pay Me</h2>
       <div class="pay-box">
         <div class="pay-label">Bitcoin Lightning</div>
@@ -52,11 +85,16 @@
       <div class="pay-box">
         <div class="pay-label">Crypto (ETH, USDC)</div>
         <div class="pay-addr">0xbE4E9d2B2D2Ae4FB75c6D5a2a02C6bDd3D5aF00c</div>
-        <div class="btc">ERC-20 / EVM via Privy — sends to same wallet</div>
       </div>
-      <a class="btn btn-stripe" href="https://buy.stripe.com/9RE6oI1Nm4E45pCfZB">Pay via Card ($25–250+)</a>
-      <a class="btn btn-algo" href="https://algora.io/profile/lanxevo3">View on Algora</a>
+      <div class="pay-row">
+        <a class="btn btn-stripe" href="https://buy.stripe.com/9RE6oI1Nm4E45pCfZB">Pay via Card ($25-250+)</a>
+        <a class="btn btn-algo" href="https://algora.io/profile/lanxevo3">Algora Profile</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <a href="https://gist.github.com/lanxevo3/268a019f1f7d5b1fa2b465704a0301cd">Full pricing + invoice links</a> &middot; GitHub: lanxevo3
     </div>
   </div>
 </body>
-</html>
+</html>        <div class="item-meta">Python &middot; Redis &middot; OAuth</div
