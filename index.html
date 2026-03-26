@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,7 +16,9 @@
     .pay-box { background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 14px; margin-bottom: 10px; text-align: left; }
     .pay-label { font-size: 0.75rem; color: #8b949e; text-transform: uppercase; margin-bottom: 6px; }
     .pay-addr { font-family: monospace; font-size: 0.78rem; color: #58a6ff; word-break: break-all; background: #161b22; padding: 8px; border-radius: 4px; }
-    .btn { display: inline-block; background: #238636; color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; margin-top: 12px; }
+    .btn { display: inline-block; color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; margin: 6px 4px 0 0; }
+    .btn-stripe { background: #635bff; }
+    .btn-algo { background: #238636; }
     .btc { font-size: 0.75rem; color: #6e7681; margin-top: 8px; }
   </style>
 </head>
@@ -24,12 +26,11 @@
   <div class="container">
     <h1>lanxevo3</h1>
     <p>Open source developer. I build connectors, integrations, and tooling.<br>Paid in BTC or fiat. Fast delivery.</p>
-
     <div class="card">
       <h2>Recent Work</h2>
       <div class="item">
         <div class="item-title">Jira Service Management Connector</div>
-        <div class="item-desc">Full JSM REST API connector.  bounty paid via Algora.</div>
+        <div class="item-desc">Full JSM REST API connector. Bounty paid via Algora.</div>
       </div>
       <div class="item">
         <div class="item-title">S3-compatible endpoint (MinIO, R2, Wasabi)</div>
@@ -44,11 +45,17 @@
     <div class="card payment-section">
       <h2>Pay Me</h2>
       <div class="pay-box">
-        <div class="pay-label">Bitcoin via Privy (BTC, ETH, USDC)</div>
-        <div class="pay-addr">0xbE4E9d2B2D2Ae4FB75c6D5a2a02C6bDd3D5aF00c</div>
-        <div class="btc">ERC-20 / EVM address via Privy — sends to same wallet</div>
+        <div class="pay-label">Bitcoin Lightning</div>
+        <div class="pay-addr">sapphirecreativity778592@getalby.com</div>
+        <div class="pay-addr">lanxevo3@strike.me</div>
       </div>
-      <a class="btn" href="https://algora.io/profile/lanxevo3">View on Algora</a>
+      <div class="pay-box">
+        <div class="pay-label">Crypto (ETH, USDC)</div>
+        <div class="pay-addr">0xbE4E9d2B2D2Ae4FB75c6D5a2a02C6bDd3D5aF00c</div>
+        <div class="btc">ERC-20 / EVM via Privy — sends to same wallet</div>
+      </div>
+      <a class="btn btn-stripe" href="https://buy.stripe.com/9RE6oI1Nm4E45pCfZB">Pay via Card ($25–250+)</a>
+      <a class="btn btn-algo" href="https://algora.io/profile/lanxevo3">View on Algora</a>
     </div>
   </div>
 </body>
